@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<style>
+        table, th, td {
+            border:1px solid black;
+            border-collapse: collapse;
+            
+        }
+</style>
+<body>
+    <table style="margin-left:auto;margin-right:auto;">
+        <tr>
+            {% for book in books %}
+            <td><a href="{% url 'book-detail' book.slug %}">{{book.title}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
+<!-- {% comment %} <!-- <th>{{book.title}}</th>
+                <th>{{book.is_bestselling}}</th>
+                <th>{{book.author}}</th>  --> {% endcomment %}
+            {% comment %} <td><a href="{% url 'book-detail' book.id %}">{{book.title}}</a></td> {% endcomment %} --> 
